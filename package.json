@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3069",
     "dev:staging": "cross-env APP_ENV=staging next dev -p 3069",
-    "build": "next build",
-    "build:local": "cross-env APP_ENV=local next build",
+    "build": "next build --webpack",
+    "build:local": "cross-env APP_ENV=local next build --webpack",
     "start": "next start",
     "lint": "next lint"
   },
