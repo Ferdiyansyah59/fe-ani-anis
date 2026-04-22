@@ -18,7 +18,10 @@ export default function PortofolioHero() {
 
       <div className="max-w-7xl mx-auto w-full px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+          <div
+            className="flex-1 text-center lg:text-left"
+            data-aos="fade-right"
+          >
             <span className="inline-block text-sm font-semibold text-greenfont2 tracking-widest uppercase mb-3 bg-white/60 backdrop-blur-sm px-4 py-1.5 rounded-full border border-secondary">
               Karya Terbaik Kami
             </span>
@@ -26,9 +29,9 @@ export default function PortofolioHero() {
               Portofolio
             </h1>
             <p className="mt-5 text-greenfont3 text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Dalam setiap layanan yang kami berikan — UI/UX Design, Web Development,
-              Mobile App, hingga AI/ML — kami selalu mengutamakan kualitas dan
-              profesionalisme demi memenuhi kepercayaan klien.
+              Dalam setiap layanan yang kami berikan — UI/UX Design, Web
+              Development, Mobile App, hingga AI/ML — kami selalu mengutamakan
+              kualitas dan profesionalisme demi memenuhi kepercayaan klien.
             </p>
 
             <div className="mt-8 flex items-center gap-6 lg:gap-8 justify-center lg:justify-start">
@@ -38,8 +41,12 @@ export default function PortofolioHero() {
                 { value: "4", label: "Layanan Utama" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-greenfont1">{stat.value}</div>
-                  <div className="text-xs text-greenfont3 font-medium mt-0.5">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-greenfont1">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-greenfont3 font-medium mt-0.5">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -51,7 +58,7 @@ export default function PortofolioHero() {
             data-aos-delay="100"
           >
             <Image
-              src="/images/portofolio/portofolio-hero.png"
+              src="/images/sat.jpeg"
               alt="Portfolio Hero"
               fill
               className="object-contain object-center"

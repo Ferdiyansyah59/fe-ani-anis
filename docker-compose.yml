@@ -4,13 +4,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3369:3369"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_MAIN_URL=${NEXT_PUBLIC_MAIN_URL:-http://localhost:3000}
+      - NEXT_PUBLIC_MAIN_URL=${NEXT_PUBLIC_MAIN_URL:-http://localhost:3369}
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3369"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -23,11 +23,11 @@ services:
       dockerfile: Dockerfile
       target: builder
     ports:
-      - "3000:3000"
+      - "3369:3369"
     environment:
       - NODE_ENV=development
-      - NEXT_PUBLIC_MAIN_URL=${NEXT_PUBLIC_MAIN_URL:-http://localhost:3000}
-    command: npm run dev
+      - NEXT_PUBLIC_MAIN_URL=${NEXT_PUBLIC_MAIN_URL:-http://localhost:3369}
+    command: npx next dev -H 0.0.0.0 -p 3369
     volumes:
       - .:/app
       - /app/node_modules
